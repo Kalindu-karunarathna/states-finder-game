@@ -30,6 +30,17 @@ guessed_states = []
 #check the correctness and track the points
 while len(guessed_states)<50:
     answer = turtle.textinput(f"{len(guessed_states)}/50 States correct", "What's the name of the state?").title()
+
+    #if user enter exit, create a csv file that contain the missing states
+    if  answer == "Exit":
+        missing_states=[]
+        for i in state_names:
+            if i not in guessed_states:
+                missing_states.append(i)
+        new_data = pandas.DataFrame(missing_states)
+        new_data.to_csv("states_to_learn.csv")
+        break
+
     for i in state_names:
         if answer == i:
             row = data[data.state == i].iloc[0]
