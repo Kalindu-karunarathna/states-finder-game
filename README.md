@@ -73,36 +73,16 @@ python main.py
 - Prevents duplicate answers
 - Generates a **CSV file of missing states** when the user exits
 - Uses CSV data for easy scalability
-- Beginner-friendly Python project
+
 
 ---
 
-## 🎯 Learning Outcomes
 
-This project helped me practice:
-
-- Python fundamentals
-- Object-oriented programming
-- Working with CSV files using Pandas
-- GUI programming with Turtle Graphics
-- Game logic and user input handling
-
----
-
-## 📌 Future Improvements
-
-- Display final score on the screen
-- Add timer-based gameplay
-- Show remaining states count in real time
-- Difficulty levels or hints
-- Improve UI with better fonts and colors
-
----
 
 ## 👤 Author
 
-**Kalindu Karunarathne**  
-Python Developer | Software Engineering Student
+**Kalindu Karunarathna**  
+Python Developer | Software Engineering Undergraduate
 
 ---
 
