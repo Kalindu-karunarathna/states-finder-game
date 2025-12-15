@@ -44,14 +44,15 @@ while len(guessed_states)<50:
         break
 
     for i in state_names:
-        if answer == i:
-            row = data[data.state == i].iloc[0]
-            x_cor = row.x
-            y_cor = row.y
-            correct_state = location(x_cor, y_cor)
-            correct_state.write(i,align="center", font=("Arial", 10, "bold"))
-            guessed_states.append(i)
-            playsound("sounds/correct.mp3")
+        if answer not in guessed_states:
+            if answer == i:
+                row = data[data.state == i].iloc[0]
+                x_cor = row.x
+                y_cor = row.y
+                correct_state = location(x_cor, y_cor)
+                correct_state.write(i,align="center", font=("Arial", 10, "bold"))
+                guessed_states.append(i)
+                playsound("sounds/correct.mp3")
 
     if answer not in state_names:
         playsound("sounds/wronganswer.mp3")
